@@ -1,4 +1,5 @@
-node_modules/
-dist/bundle*
-dist/threedy-card*
-yarn-error.log
+dist
+node_modules
+yarn.lock
+package-lock.json
+*.log

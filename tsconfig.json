@@ -1,15 +1,18 @@
 {
+  "extends": "@tsconfig/recommended/tsconfig.json",
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "moduleResolution": "node",
-    "noResolve": false,
-    "noImplicitAny": false,
-    "removeComments": true,
-    "sourceMap": true,
-    "allowJs": true,
-    "jsx": "react",
-    "allowSyntheticDefaultImports": true
-  },
-  "exclude": ["build"]
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact",
+    "jsxFactory": "",
+    "jsxFragmentFactory": "",
+    "outDir": "./dist",
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "paths": {
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"],
+      "@shared/*": ["./src/shared/*"],
+      "@types": ["./src/types.ts"]
+    }
+  }
 }
